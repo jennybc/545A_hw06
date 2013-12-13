@@ -12,6 +12,8 @@ Run 'make importAndPlot' to run the first part of the analysis to generate
 1. meanLifeExpPerContinent.svg
 2. gDat.continentSortedByLifeExp.txt
 
+> NOTE: in JB fork, svg replaced by png globally
+
 To run the second part of the analysis.  Download script 02_importAndProcess.R and 
 run 'make importAndProcess' to generate plots of countries with best and worst life
 expectancy for per continents in svg format.

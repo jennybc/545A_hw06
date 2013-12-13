@@ -7,4 +7,4 @@ importAndProcess: gDat.continentSortedByLifeExp.txt 02_importAndProcess.R
 	Rscript 02_importAndProcess.R
 
 clean:
-	/bin/rm Rplots.pdf gDat.continentSortedByLifeExp.txt *.svg
+	/bin/rm Rplots.pdf gDat.continentSortedByLifeExp.txt *.svg *.png

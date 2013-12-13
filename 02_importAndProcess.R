@@ -25,18 +25,22 @@ x[head(order(x$slope, decreasing = FALSE), n=3),])
 
 bestAndWorstRegressionCountries <- ddply(lifeExpLM, ~ continent, bestAndWorst)
 
-svg("bestAndWorstAfricanCountries.svg")
+#svg("bestAndWorstAfricanCountries.svg")
+png("bestAndWorstAfricanCountries.png")
 xyplot(lifeExp ~ year | country, subset(hDat, country %in% bestAndWorstRegressionCountries$country), subset = continent == "Africa", type = c("p", "r"))
 dev.off()
 
-svg("bestAndWorstAmericanCountries.svg")
+#svg("bestAndWorstAmericanCountries.svg")
+png("bestAndWorstAmericanCountries.png")
 xyplot(lifeExp ~ year | country, subset(hDat, country %in% bestAndWorstRegressionCountries$country), subset = continent == "Americas", type = c("p", "r"))
 dev.off()
 
-svg("bestAndWorstAsianCountries.svg")
+#svg("bestAndWorstAsianCountries.svg")
+png("bestAndWorstAsianCountries.png")
 xyplot(lifeExp ~ year | country, subset(hDat, country %in% bestAndWorstRegressionCountries$country), subset = continent == "Asia", type = c("p", "r"))
 dev.off()
 
-svg("bestAndWorstEuropeanCountries.svg")
+#svg("bestAndWorstEuropeanCountries.svg")
+png("bestAndWorstEuropeanCountries.png")
 xyplot(lifeExp ~ year | country, subset(hDat, country %in% bestAndWorstRegressionCountries$country), subset = continent == "Europe", type = c("p", "r"))
 dev.off()

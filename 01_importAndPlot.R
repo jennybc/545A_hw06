@@ -8,7 +8,9 @@ gDat <- read.delim("gapminderDataFiveYear.txt", header = TRUE)
 ggplot(ddply(gDat, ~continent + year, summarize, meanLifeExp = mean(lifeExp)), aes(year, meanLifeExp, color = continent)) + geom_point() + geom_smooth(method = "loess")
 
 # write plot to SVG output file 
-svg("meanLifeExpPerContinent.svg")
+#svg("meanLifeExpPerContinent.svg")
+# write plot to PNG output file 
+png("meanLifeExpPerContinent.png")
 ggplot(ddply(gDat, ~continent + year, summarize, meanLifeExp = mean(lifeExp)), aes(year, meanLifeExp, color = continent)) + geom_point() + geom_smooth(method = "loess")
 dev.off()
 
